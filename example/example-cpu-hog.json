@@ -1,0 +1,9 @@
+{
+  "name": "CPUHogAttack",
+  "duration": "PT20S",
+  "timeoutSeconds": 10,
+  "cloudWatchLogGroupName": "",
+  "targets": [],
+  "concurrencyPercentage": 0,
+  "otherParameters": {}
+}
