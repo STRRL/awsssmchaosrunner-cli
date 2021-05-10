@@ -28,7 +28,7 @@ class AttackConfigurationFromFile(
     class EmbedAttackConfiguration {
         var name: String = ""
         var duration: String = ""
-        var timeoutSeconds: Int = 0
+        var timeoutSeconds: Int = 120
         var cloudWatchLogGroupName: String = ""
         var targets: List<Target> = emptyList()
         var concurrencyPercentage: Int = 100
