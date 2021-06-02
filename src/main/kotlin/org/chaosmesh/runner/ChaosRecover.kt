@@ -1,8 +1,10 @@
 package org.chaosmesh.runner
 
 import com.amazonaws.services.simplesystemsmanagement.model.Command
+import mu.KotlinLogging
 import software.amazon.awsssmchaosrunner.attacks.SSMAttack
 
+private val log = KotlinLogging.logger { }
 
 object ChaosRecover {
     private val attacks = HashMap<SSMAttack, MutableList<Command>>()
@@ -13,7 +15,11 @@ object ChaosRecover {
                 run {
                     commands.forEach { command ->
                         run {
-                            attack.stop(command)
+                            try {
+                                attack.stop(command)
+                            } catch (t: Throwable) {
+                                log.error(t) { "failed to stop commands" }
+                            }
                         }
                     }
                 }
