@@ -1,0 +1,15 @@
+{
+    "name": "DependencyLatencyAttack",
+    "duration": "PT10M",
+    "timeoutSeconds":  120,
+    "cloudWatchLogGroupName" : "",
+    "targets" : [],
+    "concurrencyPercentage" :  100,
+    "otherParameters" : { 
+        "mutableMapOf" : {
+            "dependencyIpAddresses" : "test-endpoint",
+            "networkInterfaceLatencyMs" : "5", 
+            "dependencyPort" : "1234"
+            }
+        }
+    }
